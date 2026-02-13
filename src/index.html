@@ -2,16 +2,509 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sliced Office</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.png" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="/" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Sliced Office</h1>
+    </a>
+
+    <!--
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+    -->
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#problem"><i class="bi bi-question-circle navicon"></i>The Gap</a></li>
+        <li><a href="#solution"><i class="bi bi-calendar-check navicon"></i>The Solution</a></li>
+        <li><a href="#technology"><i class="bi bi-pc-display navicon"></i>The Technology</a></li>
+        <li><a href="#tenants"><i class="bi bi-person-workspace navicon"></i>Your Office</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Find Your Office</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i>About Us</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Sliced Office</h2>
+        <p><a href="#problem"><span class="typed" data-typed-items="Only pay for the office days you use"></span></a>
+          <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+          <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Testimonials Section -->
+    <section id="problem" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>The Gap</h2>
+        <p>Hybrid working is the new norm, but it's not quite working for you - yet!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I want to work from home four days a week. I spend less time commuting and more time working. It makes me more productive!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <!-- <h3>Sara Wilsson</h3> -->
+                <h3>The Team</h3>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I want to see our people in the office. The company culture lives in the conversations that happen face to face. And our clients need to know where to find us!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <!-- <h3>Saul Goodman</h3> -->
+                <h3>CEO &amp; Founder</h3>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The rent for the office is a significant expense. We're burning money - and most of the time the office is mostly empty!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <!-- <h3>Jena Karlis</h3> -->
+                <h3>Chief Financial Officer</h3>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Resume Section -->
+    <section id="solution" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>The Solution</h2>
+        <p><span class="text-primary-emphasis">Sliced Office</span> is a new way of leasing office space
+          that merges seamlessly with hybrid working.</p>
+       <br/>
+     </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="resume-item pb-0">
+              <h4>Only the office you need</h4>
+              <p>Get your own fully furnished and serviced office in the CBD for just one day of each week.</p>
+              <p>Pay only for Monday. Or Tuesday. Or Friday.</p>
+            </div><!-- Edn Resume Item -->
+            <p>&nbsp;</p>
+
+            <div class="resume-item pb-0">
+              <h4>Only your office</h4>
+              <p>The space is fully dedicated to your business.​​</p>
+              <p>Digital signage and the movable physical assets you choose reflect your brand.</p>
+            </div><!-- Edn Resume Item -->
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="resume-item pb-0">
+              <h4>You're in control</h4>
+              <p>The office and network are secured for you alone on your leased day.</p>
+              <p>Your physical assets go into secure storage in between days.</p>
+            </div><!-- Edn Resume Item -->
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Resume Section -->
+    <section id="technology" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>The Technology</h2>
+        <p><span class="text-primary-emphasis">Sliced Office</span> provides the tools that make your office just work.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="resume-item pb-0">
+              <h4>Access Control</h4>
+              <p>The office and network are secured for you alone on your leased day. Your physical assets go into
+                secure storage in between days.</p>
+              <p><span class="text-primary-emphasis">Sliced Office</span> provides a dashboard that allows you to
+                enrol office access cards and network access for all of your employees. Your secure storage is
+                always available.</p>
+            </div><!-- Edn Resume Item -->
+            <p>&nbsp;</p>
+
+            <div class="resume-item pb-0">
+              <h4>Branded Space</h4>
+              <p>Use the dashboard to assign any assets you choose to digital signs, both in your office and in shared
+                spaces in the building.</p>
+              <p>Use movable physical assets to augment your branding. <span class="text-primary-emphasis">Sliced Office</span>
+                partners with specialist interior designers who can help you put together a branding pack for your office.</p>
+            </div><!-- Edn Resume Item -->
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="resume-item pb-0">
+              <h4>High Availability</h4>
+              <p><span class="text-primary-emphasis">Sliced Office</span> runs high availability services in the cloud
+                coupled with on site edge devices. You can always access your office and use our services at the
+                appropriate time, regardless of internet access.</p>
+              <p>Your access card allows entry to your office for 24 hours on your leased day. Your SSID is available
+                for the same time. Digital signage is switched automatically.</p>
+            </div><!-- Edn Resume Item -->
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Tenants Section -->
+    <section id="tenants" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Your Office</h2>
+        <p>Get a fully furnished and serviced office in the CBD for your organisation for just one day of each
+           week. Give your employees their office day at a fraction of the cost of a full-time office lease.</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-person-workspace"></i></div>
+            <div>
+              <h4 class="title">Your workspace</h4>
+              <p class="description">Private fully furnished secured offices set up for hotdesking</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-mailbox"></i></div>
+            <div>
+              <h4 class="title">Your address</h4>
+              <p class="description">A professional business address with mail handling</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="bi bi-brilliance"></i></div>
+            <div>
+              <h4 class="title">Your brand</h4>
+              <p class="description">Company branding on digital signage in the office and shared spaces</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon flex-shrink-0"><i class="bi bi-hdd-network"></i></div>
+            <div>
+              <h4 class="title">Your network</h4>
+              <p class="description">High speed reliable wired and/or wireless internet with access controlled by you</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon flex-shrink-0"><i class="bi bi-printer"></i></div>
+            <div>
+              <h4 class="title">Your printer</h4>
+              <p class="description">Dedicated printers, scanners and copiers</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon flex-shrink-0"><i class="bi bi-people"></i></div>
+            <div>
+              <h4 class="title">Your meeting spaces</h4>
+              <p class="description">Your own meeting rooms with video-conferencing, screens and whiteboards</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="700">
+            <div class="icon flex-shrink-0"><i class="bi bi-cup"></i></div>
+            <div>
+              <h4 class="title">Your breakout spaces</h4>
+              <p class="description">Kitchen facilities with tea, coffee machine, snacks, etc. Beer, wine and extra catering available on demand</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="800">
+            <div class="icon flex-shrink-0"><i class="bi bi-bandaid"></i></div>
+            <div>
+              <h4 class="title">Your support</h4>
+              <p class="description">On-site or remote support for network, service or equipment issues</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="900">
+            <div class="icon flex-shrink-0"><i class="bi bi-lock"></i></div>
+            <div>
+              <h4 class="title">Your storage</h4>
+              <p class="description">Secure physical storage for use outside of your leased office days</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Tenants Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <p>Send us a message now. We'll help you find the office for your office day.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="" value="Hi! We need an office">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Us</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-8 content">
+            <p>
+              In the years before COVID-19 hybrid working was just becoming a thing. A few of
+              us worked from home one or two days a week, but Teams meetings were awkward
+              affairs and we used that time mostly to focus on our own work.
+            </p>
+            <p>
+              Fast forward to 2020 and suddenly we were all doing it. Everybody was working
+              from home because we had to, and Teams meetings started to work as we all just
+              got used to them.
+            </p>
+            <p>
+              Now many of us have got the taste for hybrid working and never looked back. We
+              don't miss the commute at all. And it makes things a whole lot easier if you're
+              one of two working parents.
+            </p>
+            <p>
+              What has that meant for the office?
+            </p>
+            <p>
+              Company offices sized for dozens have a handful of people most days. Or offices
+              mostly empty all week except for the company office day, when we all get
+              together. The only thing that hasn't changed is the rent.
+            </p>
+            <p>
+              We had the brain wave that many companies only need that one office day a week.
+              Everybody wants offices that are their space alone, not shared with a dozen
+              other companies. But CBD offices are expensive, and nobody wants to pay for
+              office space they don't use.
+            </p>
+            <p>
+              Now you can have it both ways!
+            </p>
+            <p>
+              <span class="text-primary-emphasis">Sliced Office</span> is based in Auckland, New Zealand.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-img.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
   </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Sliced Office Ltd</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
